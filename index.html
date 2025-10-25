@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayoob Zawahir - UI/UX Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(2rem); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { transform: translateY(-10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slide-in {
+            animation: slideIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .transition-smooth {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+    </style>
+</head>
+<body class="bg-blue-900 text-white font-sans">
+    <!-- Navbar -->
+    <nav id="navbar" class="p-4 fixed w-full z-10 transition-smooth" style="background-color: rgba(30, 58, 138, 0.9);">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <h2 class="text-xl font-bold transition-smooth hover:scale-105">Ayoob Zawahir</h2>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#home" class="nav-link hover:text-blue-200 transition-smooth">Home</a>
+                <a href="#about" class="nav-link hover:text-blue-200 transition-smooth">About</a>
+                <a href="#skills" class="nav-link hover:text-blue-200 transition-smooth">Skills</a>
+                <a href="#experience" class="nav-link hover:text-blue-200 transition-smooth">Experience</a>
+                <a href="#languages" class="nav-link hover:text-blue-200 transition-smooth">Languages</a>
+                <a href="#education" class="nav-link hover:text-blue-200 transition-smooth">Education</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none transition-smooth">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 p-4 absolute w-full top-16 left-0 space-y-2 opacity-0 transform translate-y-[-10px] transition-smooth">
+            <a href="#home" class="block hover:text-blue-200 transition-smooth py-2">Home</a>
+            <a href="#about" class="block hover:text-blue-200 transition-smooth py-2">About</a>
+            <a href="#skills" class="block hover:text-blue-200 transition-smooth py-2">Skills</a>
+            <a href="#experience" class="block hover:text-blue-200 transition-smooth py-2">Experience</a>
+            <a href="#languages" class="block hover:text-blue-200 transition-smooth py-2">Languages</a>
+            <a href="#education" class="block hover:text-blue-200 transition-smooth py-2">Education</a>
+        </div>
+    </nav>
+
+    <div class="pt-28 max-w-4xl mx-auto p-4 md:p-6"> <!-- Increased padding-top to 28 to clear navbar -->
+        <!-- Home Section -->
+        <section id="home" class="text-center mb-8 md:mb-10" data-scroll-animate>
+            <img src="images/image.jpg" alt="Ayoob Zawahir" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-3 md:mb-4 border-4 border-white transition-smooth hover:scale-105" style="position: relative; z-index: 0;">
+            <h1 class="text-3xl md:text-4xl font-bold">Ayoob Zawahir</h1>
+            <h2 class="text-xl md:text-2xl text-blue-200">UI/UX Developer</h2>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white text-blue-900 p-4 md:p-6 rounded-lg mb-6 shadow-lg opacity-0 translate-y-8 transition-all duration-500 ease-out transform" data-scroll-animate>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">About</h2>
+            <p class="text-sm md:text-base">A creative and detail-oriented UI/UX Developer with expertise creating intuitive, user-friendly digital experiences. Skilled in HTML, CSS, JavaScript, React, and Vue.js, with wireframing, prototyping, and front-end programming experience. Capable of cooperating with designers, developers, and stakeholders to produce seamless, visually appealing, and responsive applications. I'm passionate about user-centered design, accessibility, and performance optimization.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-white text-blue-900 p-4 md:p-6 rounded-lg mb-6 shadow-lg opacity-0 translate-y-8 transition-all duration-500 ease-out transform" data-scroll-animate>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Skills</h2>
+            <div class="space-y-3 md:space-y-4">
+                <div>
+                    <p class="flex justify-between text-sm md:text-base"><span>Bootstrap</span><span>80%</span></p>
+                    <div class="w-full bg-gray-300 rounded-full h-2 md:h-2.5">
+                        <div class="bg-blue-600 h-2 md:h-2.5 rounded-full transition-smooth" id="bootstrap-skill"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="flex justify-between text-sm md:text-base"><span>Vue.js</span><span>75%</span></p>
+                    <div class="w-full bg-gray-300 rounded-full h-2 md:h-2.5">
+                        <div class="bg-blue-600 h-2 md:h-2.5 rounded-full transition-smooth" id="vuejs-skill"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="flex justify-between text-sm md:text-base"><span>React</span><span>80%</span></p>
+                    <div class="w-full bg-gray-300 rounded-full h-2 md:h-2.5">
+                        <div class="bg-blue-600 h-2 md:h-2.5 rounded-full transition-smooth" id="react-skill"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="bg-white text-blue-900 p-4 md:p-6 rounded-lg mb-6 shadow-lg opacity-0 translate-y-8 transition-all duration-500 ease-out transform" data-scroll-animate>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Experience</h2>
+            <div class="mb-4 md:mb-6">
+                <h3 class="text-lg md:text-xl font-medium">UI/UX Developer - Qept, Doha</h3>
+                <p class="text-gray-600 text-xs md:text-sm">Jan 2023 - Nov 2023</p>
+                <ul class="list-disc list-inside mt-2 text-sm md:text-base">
+                    <li>Developed user-centric web apps with React.js, increasing engagement by 30%.</li>
+                    <li>Implemented lazy loading and optimizations, reducing load times by 40%.</li>
+                </ul>
+            </div>
+            <div class="mb-4 md:mb-6">
+                <h3 class="text-lg md:text-xl font-medium">UI/UX Developer - VistaG (Pvt) Ltd, Sri Lanka</h3>
+                <p class="text-gray-600 text-xs md:text-sm">Aug 2019 - Jul 2022</p>
+                <ul class="list-disc list-inside mt-2 text-sm md:text-base">
+                    <li>Created responsive apps with Vue.js, boosting user engagement by 25%.</li>
+                    <li>Implemented PWA features, improving mobile performance by 35%.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg md:text-xl font-medium">Front-End Developer & UI/UX Designer - Smile Holdings (Pvt) Ltd, Sri Lanka</h3>
+                <p class="text-gray-600 text-xs md:text-sm">Jan 2016 - Jul 2019</p>
+                <ul class="list-disc list-inside mt-2 text-sm md:text-base">
+                    <li>Created responsive UI components, increasing mobile usability by 40%.</li>
+                    <li>Converted legacy sites to Vue.js, improving load times by 50%.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Languages Section -->
+        <section id="languages" class="bg-white text-blue-900 p-4 md:p-6 rounded-lg mb-6 shadow-lg opacity-0 translate-y-8 transition-all duration-500 ease-out transform" data-scroll-animate>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Languages</h2>
+            <ul class="space-y-2 text-sm md:text-base">
+                <li>English</li>
+                <li>Tamil</li>
+                <li>Malayalam</li>
+                <li>Sinhala</li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="bg-white text-blue-900 p-4 md:p-6 rounded-lg mb-6 shadow-lg opacity-0 translate-y-8 transition-all duration-500 ease-out transform" data-scroll-animate>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Education</h2>
+            <p class="text-sm md:text-base"><strong>BEng Software Engineering</strong> - London Metropolitan University (Feb 2020 - Feb 2021)</p>
+            <p class="text-sm md:text-base"><strong>HND in Software Engineering</strong> - Esoft Metro Campus, Kandy, Sri Lanka (Sep 2019 - Jan 2020)</p>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Skills bar animation
+            const skills = {
+                'bootstrap-skill': 80,
+                'vuejs-skill': 75,
+                'react-skill': 80
+            };
+            Object.entries(skills).forEach(([id, targetWidth], index) => {
+                const element = document.getElementById(id);
+                let width = 0;
+                const animate = () => {
+                    if (width < targetWidth) {
+                        width += (targetWidth - width) * 0.15;
+                        element.style.width = `${Math.min(width, targetWidth)}%`;
+                        requestAnimationFrame(animate);
+                    }
+                };
+                setTimeout(() => requestAnimationFrame(animate), index * 100);
+            });
+
+            // Smooth hover effect for header image
+            const image = document.querySelector('#home img');
+            image.addEventListener('mouseover', () => {
+                image.style.transform = 'scale(1.05)';
+                image.style.transition = 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            });
+            image.addEventListener('mouseout', () => {
+                image.style.transform = 'scale(1)';
+                image.style.transition = 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            });
+
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden', isOpen);
+                mobileMenu.classList.toggle('opacity-0', isOpen);
+                mobileMenu.classList.toggle('translate-y-[-10px]', isOpen);
+                mobileMenu.classList.toggle('opacity-100', !isOpen);
+                mobileMenu.classList.toggle('translate-y-0', !isOpen);
+            });
+
+            // Sticky navbar with background change and active link highlight
+            const navbar = document.getElementById('navbar');
+            const navLinks = document.querySelectorAll('.nav-link');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.style.backgroundColor = 'rgba(30, 58, 138, 1)';
+                } else {
+                    navbar.style.backgroundColor = 'rgba(30, 58, 138, 0.9)';
+                }
+
+                navLinks.forEach(link => {
+                    const section = document.querySelector(link.getAttribute('href'));
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                        navLinks.forEach(l => l.classList.remove('text-blue-200'));
+                        link.classList.add('text-blue-200');
+                    }
+                });
+            });
+
+            // Scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                        entry.target.classList.add('opacity-100', 'translate-y-10');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('[data-scroll-animate]').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
